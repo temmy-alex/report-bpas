@@ -19,4 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('report', [ReportController::class, 'index']);
-Route::post('download', [ReportController::class, 'download'])->name('report.download');
+Route::post('download/{name_file}', [ReportController::class, 'download'])->name('report.download');

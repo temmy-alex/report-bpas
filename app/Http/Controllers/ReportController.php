@@ -12,14 +12,14 @@ class ReportController extends Controller
         return view('report.index');
     }
 
-    public function download()
+    public function download($name_file)
     {
         // $pdf =  PDF::loadView('backend.borang.report.pdf_certificate',[
         //     'datas' => $sorted,
         //     'doctor_name' => $doctor_name
         // ] )->setPaper('a4','landscape');
 
-        $pdf = PDF::loadView('report.pdf');
+        $pdf = PDF::loadView("report.$name_file");
         return $pdf->stream('report-bpas.pdf');
     }
 }
