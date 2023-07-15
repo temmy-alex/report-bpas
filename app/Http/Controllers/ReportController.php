@@ -21,5 +21,6 @@ class ReportController extends Controller
 
         $pdf = PDF::loadView("report.$name_file");
         return $pdf->stream('report-bpas.pdf');
+        // return view('report.pdf_do_bpas');
     }
 }
