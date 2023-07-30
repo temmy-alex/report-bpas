@@ -19,8 +19,8 @@ class ReportController extends Controller
         //     'doctor_name' => $doctor_name
         // ] )->setPaper('a4','landscape');
 
-        $pdf = PDF::loadView("report.$name_file");
-        return $pdf->stream('report-bpas.pdf');
-        // return view('report.pdf_do_bpas');
+        // $pdf = PDF::loadView("report.$name_file");
+        // return $pdf->stream('report-bpas.pdf');
+        return view('report.pdf_po_bpas');
     }
 }
